@@ -7,6 +7,10 @@
     <meta name="robots" content="noindex" />
     <title>Minami's Portfolio</title>
     <link rel="stylesheet" href="./assets/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+      />
   </head>
   <body>
     <img
@@ -79,6 +83,49 @@
         </div>
       </div>
 
+      <div style="height: 20px"></div>
+
+      <div class="card-cover bg-white">
+        <h2 class="card-title-cover bg-2 text-light">
+          <div class="card-title">Hobby</div>
+          <div class="card-subtitle">趣味</div>
+          <div class="card-title-line"></div>
+        </h2>
+        <div class="card-contents">
+          　もの作りと音楽鑑賞が趣味です。私が今まで制作した作品です。
+          最近はナノブロックにハマっています。
+        </div>
+        <div
+          class="swiper-area"
+          style="
+            --swiper-navigation-color: #fff;
+            --swiper-pagination-color: #fff;
+            "
+        >
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+             <div class="swiper-title">スノードーム</div>
+             <img src="./assets/photos/image/snow.jpg" alt="スノードーム" />
+            </div>
+            <div class="swiper-slide">
+             <div class="swiper-title">キーホルダー</div>
+             <img src="./assets/photos/image/key.jpg" alt="キーホルダー" />
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-title">カレンダー 12月</div>
+              <img src="./assets/photos/image/calender.jpg" alt="カレンダー" />
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-title">ナノブロック</div>
+              <img src="./assets/photos/image/nano.jpg" alt="ナノブロック">
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+
       <div style="height: 40px"></div>
 
       <footer class="footer-cover bg-2 text-light">
@@ -86,5 +133,20 @@
         <div class="footer-contents">&copy; Minami's web page.</div>
       </footer>
     </div>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper('.swiper-area', {
+        direction: 'horizontal',
+        spaceBetween: 30,
+        autoplay: {delay: 10 * 1000, disable0nInteraction: false},
+        loop: true,
+        pagination: {e1: '.swiper-pagination'},
+        navigation: {
+          nextE1: '.swiper-button-next',
+          prevE1: '.swiper-button-prev',
+        },
+      })
+    </script>
   </body>
 </html>
