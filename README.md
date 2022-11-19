@@ -18,6 +18,8 @@ $ docker run -dit --rm --name portfolio1 -v "$PWD/public":/usr/local/apache2/htd
 
 <http://localhost:3000/>
 
+※スーパーリロード　shift + ctrl + R
+
 ## コンテナ終了
 
 制作終了時は以下のコマンドでコンテナを終了します。
